@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016/10/13 ?U?? 02:08:53 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="jj.model.Tour_evaluateBean" table="TOUR_EVALUATE">
+        <id name="order_id" type="int">
+            <column name="ORDER_ID" />
+            <generator class="assigned" />
+        </id>
+        
+        <property name="tour_id" type="int">
+            <column name="TOUR_ID" />
+        </property>
+        <property name="member_id" type="int">
+            <column name="MEMBER_ID" />
+        </property>
+        <property name="evaluate" type="java.lang.String">
+            <column name="EVALUATE" />
+        </property>
+        <property name="rating" type="int">
+            <column name="RATING" />
+        </property>
+        <property name="evaluate_status" type="boolean">
+            <column name="EVALUATE_STATUS" />
+        </property>
+        
+        
+        
+        
+        <many-to-one name="tourid" class="jj.model.TourBean"  insert="false" update="false">
+            <column name="TOUR_ID" />
+        </many-to-one>
+        
+        <many-to-one name="memberid" class="model.MemberBean"  insert="false" update="false">
+           <column name="MEMBER_ID" />
+       	</many-to-one>
+       	
+       	
+       	<one-to-one name="tour_order" class="jj.model.Tour_orderBean" cascade="delete">
+        </one-to-one>
+        
+    </class>
+</hibernate-mapping>

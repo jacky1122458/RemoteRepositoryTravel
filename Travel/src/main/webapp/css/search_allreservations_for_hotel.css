@@ -1,0 +1,72 @@
+.search_box_title {
+	margin: 5px 0 5px;
+	font-size: 45px;
+	font-family: "Tw Cen MT Condensed Extra Bold";
+	color:wheat;
+}
+.fontstylebar{
+	font-size: 2em;
+	font-weight:bold;
+	margin-top:0.5em;
+}
+.fontstylebar:hover{
+	color:#FFBB39;
+}
+.check_hotel_content{
+	width:560px;
+	position:relative;
+	left:100px;
+	text-align:left;
+	display:inline-block;
+	letter-spacing: 3px;
+}
+.spacing-line{
+	border: 2px #FFD306 groove;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width:300px;
+}
+.bedtype{
+	margin-bottom:10px;
+}
+.hotel_room_price{
+	position: relative;
+	font-weight: bold;
+	font-size: 24px;
+	text-decoration: underline;
+}
+.checkinandout{
+	position:relative;
+	left:100px;
+	top:35px;
+	margin-bottom:20px;
+}
+.checkinandout p{
+	display:inline;
+}
+#Mainframe {
+	width: 50%;
+	height: auto;
+	margin: 0 auto;
+	position: relative;
+	top: 120px;
+}
+.main_introduce_loop {
+	width: auto;
+	height: 450px;
+	margin: 5px 5px;
+	padding: 5px 5px;
+	border: 3px #BBBBBB solid;
+	margin: 10px 10px;
+	padding: 5px 5px;
+	background-color: #DBDBDB;
+	border-radius: 10px;
+}
+.big_img_template {
+	width: 300px;
+	height: 360px;
+	border-radius: 10px;
+}
+
+
+

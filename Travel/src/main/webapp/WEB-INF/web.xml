@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
+  <display-name>Travel</display-name>
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>/WEB-INF/beans.config.xml</param-value>
+  </context-param>
+  <listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+  <resource-ref>
+    <res-ref-name>jdbc/xxx</res-ref-name>
+    <res-type>javax.sql.DataSource</res-type>
+    <res-auth>Container</res-auth>
+    <res-sharing-scope>Shareable</res-sharing-scope>
+  </resource-ref>
+  <session-config>
+	<session-timeout>100</session-timeout>
+  </session-config>
+  <welcome-file-list>
+    <welcome-file>Index.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <!--Exception Handle-->
+  <error-page>
+  <error-code>400</error-code>
+  <location>/Index.jsp</location>
+  </error-page>
+  
+  <error-page>
+  <error-code>401</error-code>
+  <location>/Index.jsp</location>
+  </error-page>
+  
+  <error-page>
+  <error-code>403</error-code>
+  <location>/Index.jsp</location>
+  </error-page>
+  
+  <error-page>
+  <error-code>404</error-code>
+  <location>/Index.jsp</location>
+  </error-page>
+  
+  <error-page>
+  <error-code>500</error-code>
+  <location>/Index.jsp</location>
+  </error-page>
+
+</web-app>

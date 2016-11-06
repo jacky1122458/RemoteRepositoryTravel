@@ -1,0 +1,122 @@
+.placeimagein{
+	width:360px;
+	height:240px;
+	vertical-align:middle;
+	overflow:hidden;
+	border-radius:10px;
+}
+.putin{
+	width:200px;
+	overflow:hidden;
+	margin-top:30px;
+	margin-left:60px;
+}
+.putin a{
+	margin-right:10px;
+}
+.putin a img{
+	width: 50px;
+	height: 50px;
+	vertical-align: middle;
+	border-radius:10px;
+}
+.search_box_title {
+	margin-top: 5px;
+	font-size: 36px;
+	font-weight:900;
+	font-family: "Tw Cen MT Condensed Extra Bold";
+	color:#FF0000;
+}
+/*銝餅�*/
+#Mainframe {
+	width: 50%;
+	height: 450px;
+	margin: 0 auto;
+	position: relative;
+	top: 120px;
+}
+.popview_loop {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&1+0,0+100;White+to+Transparent */
+	background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	width: auto;
+	height: 450px;
+	margin: 5px 5px;
+	padding: 5px 5px;
+	border-bottom: 3px #BBBBBB solid;
+	border-radius: 30px;
+}
+.togglelink_window {
+	width: 350px;
+	height: 520px;
+	float: left;
+}
+.LocationAndAddress {
+	background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	width: 500px;
+	margin-bottom: 15px;
+	border-radius: 10px;
+	position: relative;
+	left: 25px;
+}
+.small_img_template {
+	width: 300px;
+	height: 380px;
+	border-radius: 10px;
+	position: relative;
+	left: 23px;
+}
+.schedule{
+	width:450px;
+	height:auto;
+	position:relative;
+	left:50px;
+	top:50px;
+	display:inline-block;
+	padding:10px 10px;
+	font-size: 20px;
+}
+.btn_search{
+	float:right;
+	position:relative;
+	top:360px;
+	right:50px;
+}
+.wrapper_comment{
+	width:2000px;
+	height:220px;
+	padding:10px 10px;
+	position:relative;
+	left:350px;
+	top:-320px;
+	display:inline-block;
+}
+.commentArea{
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f0b7a1+0,8c3310+50,752201+51,bf6e4e+100;Brown+Gloss */
+	background: rgb(240,183,161); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(240,183,161,1) 0%, rgba(140,51,16,1) 50%, rgba(117,34,1,1) 51%, rgba(191,110,78,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  rgba(240,183,161,1) 0%,rgba(140,51,16,1) 50%,rgba(117,34,1,1) 51%,rgba(191,110,78,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  rgba(240,183,161,1) 0%,rgba(140,51,16,1) 50%,rgba(117,34,1,1) 51%,rgba(191,110,78,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	border-radius:10px;
+	height:200px;
+	float:left;
+	font-weight:bold;
+	display:none;
+}
+.commentArea p{
+	line-height: 25px;
+}
+.p_font{
+	overflow:hidden;
+	width:200px;
+	max-height:65px;
+}
+#form-to-submit p{
+	margin: 5px 5px;
+}
+.error{
+	color:#ff0000;
+}

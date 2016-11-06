@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016/10/5 ?U?? 07:16:53 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="model.Order_detailsBean" table="ORDER_DETAILS">
+        <composite-id >
+            <key-property name="orderid" 
+                          column="ORDERID" type="integer"/>
+            <key-property name="roomid" 
+                          column="ROOMID" type="integer">
+                          
+                          </key-property>
+        </composite-id>
+        <property name="name" type="java.lang.String">
+            <column name="NAME" />
+        </property>
+        <property name="price" type="int">
+            <column name="PRICE" />
+        </property>
+        <property name="peoplenum" type="int">
+            <column name="PEOPLENUM" />
+        </property>
+        <property name="number" type="int">
+            <column name="NUMBER" />
+        </property>
+        <property name="cellphone" type="java.lang.String">
+            <column name="CELLPHONE" />
+        </property>
+        <property name="spec" type="java.lang.String">
+            <column name="SPEC" />
+        </property>
+        <property name="Status" type="java.lang.Boolean">
+            <column name="STATUS" />
+        </property>
+         <many-to-one name="ho" class="model.Hotel_orderBean"  insert="false" update="false">
+            <column name="ORDERID" />
+        </many-to-one>
+          <many-to-one name="roombean" class="model.RoomBean"  insert="false" update="false">
+            <column name="ROOMID" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

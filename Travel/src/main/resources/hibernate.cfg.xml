@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+<!--         <property name="hibernate.connection.datasource">java:comp/env/jdbc/xxx</property> -->
+        
+        <property name="hibernate.dialect">org.hibernate.dialect.SQLServer2012Dialect</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.current_session_context_class">thread</property>
+        
+        <mapping class="model.MemberBean"/>
+        <mapping class="model.SignInBean"/>
+        <!-- HOTEL -->
+        <mapping class="cht.model.Card"/>
+        <mapping class="cht.model.Service"/>
+        <mapping class="cht.model.Collect"/>
+        <mapping class="cht.model.Hotel"/>
+        <mapping class="cht.model.HotelType"/>
+        <mapping class="cht.model.HotelPhoto"/>
+        <mapping class="cht.model.HotelReview"/>
+        <mapping class="cht.model.HotelCard"/>
+        <mapping class="cht.model.HotelService"/>
+        <!-- ROOM -->
+		<mapping resource="model/RoomBean.hbm.xml"/>
+		<mapping resource="model/Year_roomsBean.hbm.xml"/>
+		<mapping resource="model/Hotel_orderBean.hbm.xml"/>
+		<mapping resource="model/Order_detailsBean.hbm.xml"/>
+		<!-- attractions -->
+		<mapping resource="model/AreaBean.hbm.xml"/>
+		<mapping resource="model/AttractionsBean.hbm.xml"/>
+		<mapping resource="model/Attractions_evaluateBean.hbm.xml"/>
+		<mapping resource="model/TourBean.hbm.xml"/>
+		<mapping resource="model/Tour_orderBean.hbm.xml"/>
+		<mapping resource="model/Tour_evaluateBean.hbm.xml"/>
+		<mapping resource="model/Travel_attractionsBean.hbm.xml"/>
+		<mapping class="jj.model.Attractions_imgBean"/>
+    </session-factory>
+</hibernate-configuration>

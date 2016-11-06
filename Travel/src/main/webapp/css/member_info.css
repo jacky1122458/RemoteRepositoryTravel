@@ -1,0 +1,29 @@
+#central{
+	margin:0px auto;	
+	text-align: left;
+	display: block;
+	width:380px;
+	background-color:#FFFFFF;
+	position: relative;
+	padding:25px 25px;
+	position:relative;
+	top:100px;
+	border:1px #3366FF dotted;
+	border-radius:10px;
+	background-color:#FEE4BD;
+}
+#central p{
+	font-size:20px;
+	font-weight:bolder;
+	margin-top:25px;
+}
+#central span{
+	font-size:20px;
+	font-weight:200;
+	margin-left: 60px;
+}
+#central input{
+	margin-left:20px;
+}
+
+

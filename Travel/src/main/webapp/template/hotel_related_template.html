@@ -1,0 +1,385 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Welcome G&King</title>
+		<meta name="Jeff" content="Student" />
+		<!-- Date: 2016-10-05 -->
+		<!-- bootstrap -->
+		<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" type="text/css"/>
+		<link rel="stylesheet" href="assets/jquery-ui-1.12.1.custom/jquery-ui.min.css"/>
+		<link rel="stylesheet" href="assets/jquery-ui-1.12.1.custom/jquery-ui.structure.min.css"/>
+		<link rel="stylesheet" href="assets/jquery-ui-1.12.1.custom/jquery-ui.theme.min.css"/>
+		<link rel="stylesheet" href="assets/style.css" type="text/css">
+		<link rel="stylesheet" href="css/goldblack.css" type="text/css" />
+		<link rel="stylesheet" href="css/hotel_list.css" type="text/css">
+
+		<!-- favicon -->
+		<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+		<link rel="icon" href="images/favicon.png" type="image/x-icon">
+
+		<style>
+			#home {
+				background-image: url("images/photos/banner.jpg");
+				background-repeat: repeat;
+				background-color: #3C3C3C;
+			}
+		</style>
+
+	</head>
+	<body id="home">
+		<nav class="navbar  navbar-default" role="navigation">
+			<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					
+					<a class="navbar-brand" href="Index.html"><img src="images/icon.png"  alt="Welcome"></a>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+
+					<ul class="nav navbar-nav">
+						<li>
+							<a href="Index.html">Home </a>
+						</li>
+						<li>
+							<a href="">關於我們</a>
+						</li>
+						<li>
+							<a href="">搜尋房間</a>
+						</li>
+						<li>
+							<a href="">查看景點</a>
+						</li>
+						<li>
+							<a href="">Contact</a>
+						</li>
+						<li>
+							<a href="login.html">會員登入</a>
+						</li>
+					</ul>
+				</div><!-- Wnavbar-collapse -->
+			</div><!-- container-fluid -->
+		</nav>
+		<div id="whole_block">
+		<div id="side_block" class="pull-left	">
+			<div id="search">
+				<div>
+					<h3 class="search_box_title"><span>搜尋</span></h3>
+				</div>
+				<form id="search_box" class="search_box_tem">
+					<div id="search_box_dest">
+						<label for="dest">旅遊地點/旅館名稱</label>
+						<input type="text" style="width:200px;height:30px;"/>
+					</div>
+					<div class="search_box_tem">
+						<div>
+							入住日期：
+						</div>
+						<div id="search_box_datefrom">
+							<input id="datefrom" type="text" readonly="readonly" style="width:200px;height:30px;"/>
+						</div>
+						<div>
+							退房日期：
+						</div>
+						<div id="search_box_dateto">
+							<input id="dateto" type="text" readonly="readonly" style="width:200px;height:30px;"/>
+						</div>
+						<div id="stay_length">
+							<input id="count_stay_length" value="入住X晚">
+						</div>
+					</div>
+					<div id="person_count_kinds" class="search_box_tem">
+						<div class="select_bar_tem">
+							<label>客房：</label>
+							<select id="rooms" name="book_rooms">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+							</select>
+						</div>
+						<div class="select_bar_tem">
+							<label>成人：</label>
+							<select id="adults" name="book_room_adults">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+							</select>
+						</div>
+						<div class="select_bar_tem">
+							<label>孩童：</label>
+							<select id="children" name="book_room_children">
+								<option value="0">0</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+							</select>
+						</div>
+					</div>
+					<button id="submit_btn" class="ui-button ui-corner-all ui-widget">
+						Search
+					</button>
+				</form>
+			</div>
+			<!--以上是 搜尋列表 -->
+
+			<div id="search_box_constrain">
+				<div>
+					<h3 class="search_box_title">篩選條件</h3>
+				</div>
+				<form id="search_box_constrain_form">
+					<div id="filter_condition_1" class="filter_tem">
+						<i class="ui-icon ui-icon-triangle-1-s"></i><span class="search_box_constrain_conditions">您的預算：</span>
+						<br>
+						<input type="checkbox"/>
+						<label for="search_box_constrain_pricetype_conditions_1">TWD 0 - TWD 1700(每晚)</label>
+						<br>
+						<input type="checkbox"/>
+						<label for="search_box_constrain_pricetype_conditions_2">TWD 1700 - TWD 3500(每晚)</label>
+						<br>
+						<input type="checkbox"/>
+						<label for="search_box_constrain_pricetype_conditions_3">TWD 35 - TWD 5200(每晚)</label>
+						<br>
+						<input type="checkbox"/>
+						<label for="search_box_constrain_pricetype_conditions_4">TWD 5200 +(每晚)</label>
+						<br>
+					</div>
+					<hr>
+					<div id="filter_condition_2" class="filter_tem">
+						<i class="ui-icon ui-icon-triangle-1-s"></i><span class="search_box_constrain_conditions">旅館類型：</span>
+						<br>
+						<input type="checkbox" />
+						<label for="search_box_constrain_hoteltype_conditions_1">飯店</label>
+						<br>
+						<input type="checkbox"/>
+						<label for="search_box_constrain_hoteltype_conditions_2">旅館</label>
+						<br>
+						<input type="checkbox"/>
+						<label for="search_box_constrain_hoteltype_conditions_3">汽車旅館</label>
+						<br>
+						<input type="checkbox"/>
+						<label for="search_box_constrain_hoteltype_conditions_4">青年旅館</label>
+						<br>
+						<input type="checkbox"/>
+						<label for="search_box_constrain_hoteltype_conditions_5">民宿</label>
+						<br>
+						<input type="checkbox"/>
+						<label for="search_box_constrain_hoteltype_conditions_6">公寓式</label>
+						<br>
+						<input type="checkbox"/>
+						<label for="search_box_constrain_hoteltype_conditions_7">膠囊旅館</label>
+						<br>
+
+					</div>
+					<hr>
+					<div id="filter_condition_3" class="filter_tem">
+						<i class="ui-icon ui-icon-triangle-1-s"></i><span class="search_box_constrain_conditions">旅館服務：</span>
+						<br>
+						<input type="checkbox" />
+						<label for="search_box_constrain_facilitytype_conditions_1">含早餐</label>
+						<br>
+						<input type="checkbox" />
+						<label for="search_box_constrain_facilitytype_conditions_2">客房服務</label>
+						<br>
+						<input type="checkbox" />
+						<label for="search_box_constrain_facilitytype_conditions_3">櫃臺24小時接待</label>
+						<br>
+						<input type="checkbox" />
+						<label for="search_box_constrain_facilitytype_conditions_4">可攜帶寵物</label>
+						<br>
+						<input type="checkbox" />
+						<label for="search_box_constrain_facilitytype_conditions_5">不須預付訂金</label>
+						<br>
+						<input type="checkbox" />
+						<label for="search_box_constrain_facilitytype_conditions_6">訂房免費取消</label>
+						<br>
+						<input type="checkbox" />
+						<label for="search_box_constrain_facilitytype_conditions_7">機場接駁車</label>
+						<br>
+						<input type="checkbox" />
+						<label for="search_box_constrain_facilitytype_conditions_8">洗衣</label>
+						<br>
+						<input type="checkbox" />
+						<label for="search_box_constrain_facilitytype_conditions_9">行李寄存</label>
+						<br>
+						<input type="checkbox" />
+						<label for="search_box_constrain_facilitytype_conditions_10">停車場</label>
+						<br>
+						<input type="checkbox" />
+						<label for="search_box_constrain_facilitytype_conditions_11">無障礙設施</label>
+						<br>
+						<input type="checkbox" />
+						<label for="search_box_constrain_facilitytype_conditions_12">禁菸客房</label>
+						<br>
+						<input type="checkbox" />
+						<label for="search_box_constrain_facilitytype_conditions_13">家庭房</label>
+						<br>
+						<input type="checkbox" />
+						<label for="search_box_constrain_facilitytype_conditions_14">免費無線網路</label>
+						<br>
+						<input type="checkbox" />
+						<label for="search_box_constrain_facilitytype_conditions_15">電梯</label>
+						<br>
+					</div>
+					<hr>
+					<div id="filter_condition_4" class="filter_tem">
+						<i class="ui-icon ui-icon-triangle-1-s"></i><span class="search_box_constrain_conditions">房間設施：</span>
+						<br>
+						<input type="checkbox" />
+						<label for="search_box_constrain_roomfacilitytype_conditions_1">電視</label>
+						<br>
+						<input type="checkbox" />
+						<label for="search_box_constrain_roomfacilitytype_conditions_2">浴缸</label>
+						<br>
+						<input type="checkbox" />
+						<label for="search_box_constrain_roomfacilitytype_conditions_3">淋浴</label>
+						<br>
+						<input type="checkbox" />
+						<label for="search_box_constrain_roomfacilitytype_conditions_4">共用洗手間</label>
+						<br>
+						<input type="checkbox" />
+						<label for="search_box_constrain_roomfacilitytype_conditions_5">廚房</label>
+						<br>
+					</div>
+					<hr>
+					<div id="filter_condition_5" class="filter_tem">
+						<i class="ui-icon ui-icon-triangle-1-s"></i><span class="search_box_constrain_conditions">台灣縣市：</span>
+						<br>
+						<input type="checkbox" />
+						<label for="search_box_constrain_areas_conditions_1">臺北市</label>
+						<br>
+						<input type="checkbox" />
+						<label for="search_box_constrain_areas_conditions_2">新北市</label>
+						<br>
+						<input type="checkbox" />
+						<label for="search_box_constrain_areas_conditions_3">基隆市</label>
+						<br>
+						<input type="checkbox" />
+						<label for="search_box_constrain_areas_conditions_4">桃園市</label>
+						<br>
+						<input type="checkbox" />
+						<label for="search_box_constrain_areas_conditions_5">新竹市</label>
+						<br>
+						<input type="checkbox" />
+						<label for="search_box_constrain_areas_conditions_6">新竹縣</label>
+						<br>
+						<input type="checkbox" />
+						<label for="search_box_constrain_areas_conditions_7">苗栗縣</label>
+						<br>
+						<input type="checkbox" />
+						<label for="search_box_constrain_areas_conditions_8">臺中市</label>
+						<br>
+						<input type="checkbox" />
+						<label for="search_box_constrain_areas_conditions_9">南投縣</label>
+						<br>
+						<input type="checkbox" />
+						<label for="search_box_constrain_areas_conditions_10">彰化縣</label>
+						<br>
+						<input type="checkbox" />
+						<label for="search_box_constrain_areas_conditions_11">雲林縣</label>
+						<br>
+						<input type="checkbox" />
+						<label for="search_box_constrain_areas_conditions_12">嘉義市</label>
+						<br>
+						<input type="checkbox" />
+						<label for="search_box_constrain_areas_conditions_13">嘉義縣</label>
+						<br>
+						<input type="checkbox" />
+						<label for="search_box_constrain_areas_conditions_14">臺南市</label>
+						<br>
+						<input type="checkbox" />
+						<label for="search_box_constrain_areas_conditions_15">高雄市</label>
+						<br>
+						<input type="checkbox" />
+						<label for="search_box_constrain_areas_conditions_16">屏東縣</label>
+						<br>
+						<input type="checkbox" />
+						<label for="search_box_constrain_areas_conditions_17">宜蘭縣</label>
+						<br>
+						<input type="checkbox" />
+						<label for="search_box_constrain_areas_conditions_18">花蓮縣</label>
+						<br>
+						<input type="checkbox" />
+						<label for="search_box_constrain_areas_conditions_19">臺東縣</label>
+						<br>
+						<input type="checkbox" />
+						<label for="search_box_constrain_areas_conditions_20">連江縣</label>
+						<br>
+						<input type="checkbox" />
+						<label for="search_box_constrain_areas_conditions_21">金門縣</label>
+						<br>
+						<input type="checkbox" />
+						<label for="search_box_constrain_areas_conditions_22">澎湖縣</label>
+						<br>
+
+					</div>
+				</form>
+			</div>
+			
+			<div id="show_google_amps">
+				<a href="" id="google.map.temp"><span id="btn_mapshow" data-title="顯示地圖"></span></a>
+				<p></p>
+			</div>
+		</div>
+
+
+		<div id="main_block" class="pull-right	">
+			<div id="ajaxsrwrap">
+				<div>
+					
+				</div>
+			</div>
+		</div>
+		</div>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<script type="text/javascript" src="assets/jquery-ui-1.12.1.custom/external/jquery/jquery.js"></script>
+		<script type="text/javascript" src="assets/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
+		
+		<script>
+			$(function() {
+				$("#datefrom,#dateto").datepicker({
+					dateFormat : "yy-mm-dd",
+					minDate: '@minDate'
+				});
+				
+				$("#submit_btn").button();
+				
+			});
+			
+			
+			
+			
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016/10/13 ?W?? 10:25:40 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="jj.model.Tour_orderBean" table="TOUR_ORDER">
+        <id name="order_id" type="int">
+            <column name="ORDER_ID" />
+            <generator class="identity" />
+        </id>
+        
+        
+        <property name="tour_id" type="int">
+            <column name="TOUR_ID" />
+        </property>
+        <property name="member_id" type="int">
+            <column name="MEMBER_ID" />
+        </property>
+        <property name="number_people" type="int">
+            <column name="NUMBER_PEOPLE" />
+        </property>
+        <property name="price" type="int">
+            <column name="PRICE" />
+        </property>
+         <property name="ordername" type="java.lang.String">
+            <column name="ORDERNAME" />
+        </property>
+         <property name="phone" type="java.lang.String">
+            <column name="PHONE" />
+        </property>
+        <property name="order_date" type="date">
+            <column name="ORDER_DATE" />
+        </property>
+        <property name="departure_date" type="date">
+            <column name="DEPARTURE_DATE" />
+        </property>
+        <property name="order_status" type="boolean">
+            <column name="ORDER_STATUS" />
+        </property>
+        
+        <many-to-one name="memberBean" class="model.MemberBean"  insert="false" update="false">
+            <column name="MEMBER_ID" />
+        </many-to-one>
+        
+        <many-to-one name="tourBean" class="jj.model.TourBean"  insert="false" update="false">
+           <column name="TOUR_ID" />
+       	</many-to-one>
+       	
+        <one-to-one name="tour_evaluate" class="jj.model.Tour_evaluateBean" cascade="delete">
+        </one-to-one>
+       	
+    </class>
+</hibernate-mapping>

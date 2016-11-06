@@ -1,0 +1,95 @@
+#search_box ul li button{
+	width: 85px;
+    padding: 2px;
+}
+#search_box ul,li{
+	list-style-type:none;
+}
+#search_box li{
+	margin-left:2px;
+	margin-bottom:2px;
+}
+.search_box_title {
+	margin: 5px 0 5px;
+	font-size: 36px;
+	font-family: "Tw Cen MT Condensed Extra Bold"
+}
+.search_box_title em {
+	font-style: italic;
+}
+.official_font {
+	font-weight: bolder;
+	font-size: x-large;
+	position: relative;
+	left: 90px;
+	top: 100px;
+}
+#Mainframe {
+	width: 45%;
+	height: auto;
+	margin: 0 auto;
+	position: relative;
+	top: 120px;
+}
+.main_introduce_loop {
+	width: auto;
+	height:auto;
+	margin: 5px 5px;
+	padding: 5px 5px;
+	border: 3px #d49768 solid;
+	border-radius: 10px;
+}
+.big_img_template {
+	width: 45%;
+	border-radius: 10px;
+}
+.brief_introduction {
+	border: 1px #d49768 dotted;
+	width: 50%;
+	margin: 10px 10px;
+	padding: 5px 5px;
+	background-color: #DBDBDB;
+	border-radius: 10px;
+}
+.togglelink {
+	font-style: oblique;
+	float: right;
+	cursor:default;
+}
+.loop {
+	width: 720px;
+	height: 570px;
+	margin: 5px 5px;
+	padding: 5px 5px;
+	display: none;
+	border-radius: 30px;
+}
+.togglelink_window {
+	width: 350px;
+	height: 520px;
+	float: left;
+}
+.LocationAndAddress {
+	background-color: #DBDBDB;
+	width: 250px;
+	margin-bottom: 40px;
+	border-radius: 10px;
+	position: relative;
+	left: 25px;
+}
+.small_img_template {
+	float:right;
+	width: 300px;
+	height: 380px;
+	border-radius: 10px;
+	position: relative;
+	right:25px;
+	top:15px;
+}
+.official_window {
+	width: 250px;
+	height: 200px;
+	margin: 50px 10px 10px 10px;
+	float: right;
+}
+

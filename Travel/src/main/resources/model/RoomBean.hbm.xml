@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016/9/30 ?U?? 03:04:37 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="model.RoomBean" table="ROOM">
+        <id name="roomid" type="java.lang.Integer">
+            <column name="ROOMID" />
+            <generator class="identity" />
+        </id>
+        <property name="hotelid" type="java.lang.Integer" access="field">
+            <column name="HOTELID" />
+        </property>
+        <property name="roomname" type="java.lang.String">
+            <column name="ROOMNAME" />
+        </property>
+        <property name="price" type="java.lang.Integer">
+            <column name="PRICE" />
+        </property>
+        <property name="weekdayrate" type="java.lang.Integer" access="field">
+            <column name="WEEKDAYRATE" />
+        </property>
+        <property name="peoplenum" type="java.lang.Integer">
+            <column name="PEOPLENUM" />
+        </property>
+        <property name="bedtype" type="java.lang.String">
+            <column name="BEDTYPE" />
+        </property>
+        <property name="number" type="java.lang.Integer">
+            <column name="NUMBER" />
+        </property>
+        <property name="area" type="java.lang.Integer">
+            <column name="AREA" />
+        </property>
+        <property name="status" type="java.lang.Boolean">
+            <column name="STATUS" />
+        </property>
+        
+        <!-- HOTEL -->
+        <many-to-one name="hb" class="cht.model.Hotel"  insert="false" update="false">
+            <column name="HOTELID" />
+        </many-to-one>
+        
+        <!-- YEAR_ROOMS -->
+		<set name="YRFR" table="YEAR_ROOMS" cascade="delete" inverse="true">
+			<key column="ROOMID"/>
+            <one-to-many  class="model.Year_roomsBean" />
+        </set>
+        
+        <!-- ORDER_DETAILSBEAN -->
+		<set name="detailsbean" table="ORDER_DETAILS" cascade="delete" inverse="true">
+			<key column="ROOMID"/>
+            <one-to-many  class="model.Order_detailsBean" />
+        </set>
+        
+    </class>
+</hibernate-mapping>

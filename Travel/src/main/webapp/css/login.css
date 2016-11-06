@@ -1,0 +1,42 @@
+#central{
+	margin:0px auto;	
+	text-align: center;
+	display: block;
+	width:410px;
+	background-color:#FFFFFF;
+	position: fixed;
+	top: 35%;
+	left: 40%;
+	padding-left: 14px;
+	padding-right: 14px;
+	border-radius: 10px;
+}
+
+.entercolumn{
+	width:200px;
+	height: 30px;
+	margin:20px;
+	vertical-align: baseline;	
+	border-radius:10px;
+}
+.entercolumn:focus{
+	border:2px #ffff00 dotted;	
+}
+
+.span{
+	position: relative;
+	font-weight: bolder;
+	
+}
+#remember{
+	position: relative;
+    left: -77px;
+    margin-top:15px;
+}
+.session{
+	margin-top: 15px;
+}
+#id{
+	position:relative;
+	left:60px;
+}

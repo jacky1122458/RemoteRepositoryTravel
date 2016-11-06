@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016/10/5 ?U?? 07:03:22 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="model.Hotel_orderBean" table="HOTEL_ORDER">
+        <id name="orderid" type="int">
+            <column name="ORDERID" />
+            <generator class="identity" />
+        </id>
+        <property name="memberid" type="int">
+            <column name="MEMBERID" />
+        </property>
+        <property name="price_total" type="int">
+            <column name="PRICE_TOTAL" />
+        </property>
+        <property name="orderdate" type="date">
+            <column name="ORDERDATE" />
+        </property>
+        <property name="checkin" type="date">
+            <column name="CHECKIN" />
+        </property>
+        <property name="checkout" type="date">
+            <column name="CHECKOUT" />
+        </property>
+        <!-- 
+        <property name="evaluatstatus" type="java.lang.Boolean">
+            <column name="EVALUATSTATUS" />
+        </property>
+         -->
+        <set name="od" table="Order_details" inverse="true" cascade="delete">
+        	<key column="ORDERID"></key>
+        	<one-to-many class="model.Order_detailsBean"/>
+        </set>
+        
+        <many-to-one name="member" class="model.MemberBean"  insert="false" update="false">
+            <column name="MEMBERID" ></column>
+        </many-to-one>
+        
+<!--         <one-to-one name="hotelreview" class="cht.model.HotelReview"> -->
+<!--         </one-to-one> -->
+        
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Welcome G&King</title>
+		<meta name="Jeff" content="Student" />
+		<!-- Date: 2016-10-07 -->
+		<!-- bootstrap -->
+		<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" type="text/css"/>
+		<link rel="stylesheet" href="assets/jquery-ui-1.12.1.custom/jquery-ui.min.css" type="text/css"/>
+		<link rel="stylesheet" href="assets/style.css" type="text/css">
+		<link rel="stylesheet" href="css/goldblack.css" type="text/css">
+		<link rel="stylesheet" href="css/member_info.css" type="text/css">
+
+		<!-- favicon -->
+		<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+		<link rel="icon" href="images/favicon.png" type="image/x-icon">
+
+		<style>
+			#home {
+				background-image: url("images/photos/banner.jpg");
+				background-repeat: repeat;
+				background-color: #3C3C3C;
+			}
+		</style>
+
+	</head>
+	<body id="home">
+		<nav class="navbar  navbar-default" role="navigation">
+			<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="Index.html"><img src="images/icon.png"  alt="Welcome"></a>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+
+					<ul class="nav navbar-nav">
+						<li>
+							<a href="Index.html">Home</a>
+						</li>
+						<li>
+							<a href="hotel_list.html">搜尋房間</a>
+						</li>
+						<li>
+							<a href="search_travel.html">搜尋行程</a>
+						</li>
+						<li>
+							<a href="search_scene.html">查看景點</a>
+						</li>
+						<li>
+							<a href="search_allreservations.html">查詢個人訂單</a>
+						</li>
+						<li>
+							<a href="#">會員登入</a>
+						</li>
+					</ul>
+				</div><!-- Wnavbar-collapse -->
+			</div><!-- container-fluid -->
+		</nav>
+
+		<div id="central" style="height:380px;">
+			<p>使用者帳號：<span>jkrolling.1234</span></p>
+			<p>密碼：<span>JK</span></p>
+			<p>電子信箱：<span>jkrolling@hotmail.com</span></p>
+			<p>手機：<span>0912345678</span></p>
+			<p>地址：<span style="font-size: 12px">台北市中山區XXXX路</span></p>
+			<p><input type="button" class="update" value="確認修改"/></p>
+			<p><input type="button" class="update" value="取消修改"/></p>
+
+		</div>
+
+		<script type="text/javascript" src="assets/jquery-ui-1.12.1.custom/external/jquery/jquery.js"></script>
+		<script type="text/javascript" src="assets/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+	
+		<script>
+			$(".update").button();
+		</script>
+	
+	</body>
+</html>

@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+		<property name="jndiName" value="java:comp/env/jdbc/xxx"></property>
+	</bean>
+	
+	<bean id="sessionFactory" destroy-method="destroy"
+			class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"></property>
+		<property name="configLocation" value="classpath:hibernate.cfg.xml"></property>
+	</bean>
+	
+	
+	<bean id="memberService" class="model.MemberService">
+		<constructor-arg>
+			<bean class="model.dao.MemberBeanDAOHibernate">
+				<constructor-arg ref="sessionFactory"></constructor-arg>
+			</bean>
+		</constructor-arg>
+	</bean>
+	
+	<bean id="signInDAO" class="model.dao.SignInDAOHibernate">
+		<constructor-arg ref="sessionFactory"></constructor-arg>
+	</bean>
+	
+	<bean id="signinService" class="model.SignInService">
+		<constructor-arg>
+		<bean class="model.dao.SignInDAOHibernate">
+				<constructor-arg ref="sessionFactory"></constructor-arg>
+			</bean>
+		</constructor-arg>
+	</bean>
+	
+	<!-- HOTEL -->
+	<bean id ="hotelDAO" class="cht.model.dao.HotelDAOHibernate">
+		<constructor-arg ref="sessionFactory"></constructor-arg>
+	</bean>
+	
+	<bean id="searchHotelService" class="cht.model.SearchHotelService">
+		<constructor-arg ref="hotelDAO"></constructor-arg>
+	</bean>
+	
+	<bean id ="returnhotelDao" class="cht.model.dao.ReturnHotelDAOHibernate">
+		<constructor-arg ref="sessionFactory"></constructor-arg>
+	</bean>
+	
+	<bean id ="hotelphotoDAO" class="cht.model.dao.HotelPhotoDAOHibernate">
+		<constructor-arg ref="sessionFactory"></constructor-arg>
+	</bean>
+	
+	<bean id="hotelServiceAction" class="cht.model.HotelServiceAction">
+		<constructor-arg>
+			<bean class="cht.model.dao.ReturnHotelDAOHibernate">
+				<constructor-arg ref="sessionFactory"></constructor-arg>
+			</bean>
+		</constructor-arg>
+		<constructor-arg ref="hotelDAO"></constructor-arg>
+	</bean>
+	
+	<bean id="hotelbackService" class="cht.model.HotelBackstageService">
+		<constructor-arg ref="hotelDAO"></constructor-arg>
+	</bean>
+	
+	<bean id="evaluationService" class="cht.model.EvaluationService">
+		<constructor-arg>
+			<bean class="cht.model.dao.HotelReviewDAOHibernate">
+				<constructor-arg ref="sessionFactory"></constructor-arg>
+			</bean>
+		</constructor-arg>
+		<constructor-arg ref="hotelDAO"></constructor-arg>
+	</bean>
+	
+	<bean id="collectService" class="cht.model.CollectService">
+		<constructor-arg>
+			<bean class="cht.model.dao.CollectDAOHibernate">
+				<constructor-arg ref="sessionFactory"></constructor-arg>
+			</bean>
+		</constructor-arg>
+	</bean>
+	
+	<!-- ROOM -->
+	<bean id="roomDAO" class="model.dao.RoomDAOHibernate">
+	<constructor-arg ref="sessionFactory"></constructor-arg>
+	</bean>
+	<bean id="roomService" class="model.RoomService">
+		<constructor-arg>
+			<bean class="model.dao.RoomDAOHibernate">
+				<constructor-arg ref="sessionFactory"></constructor-arg>
+			</bean>
+		</constructor-arg>
+	</bean>
+	<bean id="roomPhotoDAO" class="model.dao.RoomPhotoDAOHibernate">
+	<constructor-arg ref="sessionFactory"></constructor-arg>
+	</bean>
+	<bean id="hotel_orderBeanDAO" class="model.dao.Hotel_orderBeanDAOHibernate">
+	<constructor-arg ref="sessionFactory"></constructor-arg>
+	</bean>
+	<bean id="hotel_orderService" class="model.Hotel_orderService">
+	<constructor-arg ref="hotel_orderBeanDAO"></constructor-arg>
+	</bean>
+	<bean id="order_detailsDAO" class="model.dao.Order_detailsDAOHibernate">
+	<constructor-arg ref="sessionFactory"></constructor-arg>
+	</bean>
+	<bean id="order_detailsService" class="model.Order_detailService">
+	<constructor-arg ref="order_detailsDAO"></constructor-arg>
+	</bean>
+	<bean id="year_roomsDAO" class="model.dao.Year_roomsDAOHibernate">
+	<constructor-arg ref="sessionFactory"></constructor-arg>
+	</bean>
+	<bean id="year_roomsService" class="model.Year_roomsService">
+	<constructor-arg ref="year_roomsDAO"></constructor-arg>
+	</bean>
+	<bean id="testInsertdate" class="model.misc.testInsertdate">
+	<constructor-arg ref="sessionFactory"></constructor-arg>
+	</bean>
+	
+	<!-- attractions -->
+	<bean id="areaDAO" class="jj.model.dao.AreaDAOHibernate">
+		<constructor-arg ref="sessionFactory"></constructor-arg>
+	</bean>
+
+	<bean id="attractionsDAO" class="jj.model.dao.AttractionsDAOHibernate">
+		<constructor-arg ref="sessionFactory"></constructor-arg>
+	</bean>
+
+
+	<bean id="attractions_imgDAO" class="jj.model.dao.Attractions_imgDAOHibernate">
+		<constructor-arg ref="sessionFactory"></constructor-arg>
+	</bean>
+
+	<bean id="attractions_evaluateDAO" class="jj.model.dao.Attractions_evaluateDAOHibernate">
+		<constructor-arg ref="sessionFactory"></constructor-arg>
+	</bean>
+
+
+	<bean id="tourDAO" class="jj.model.dao.TourDAOHibernate">
+		<constructor-arg ref="sessionFactory"></constructor-arg>
+	</bean>
+
+	<bean id="tour_orderDAO" class="jj.model.dao.Tour_orderDAOHibernate">
+		<constructor-arg ref="sessionFactory"></constructor-arg>
+	</bean>
+
+	<bean id="tour_evaluateDAO" class="jj.model.dao.Tour_evaluateDAOHibernate">
+		<constructor-arg ref="sessionFactory"></constructor-arg>
+	</bean>
+
+
+	<bean id="travel_attractionsDAO" class="jj.model.dao.Travel_attractionsDAOHibernate">
+		<constructor-arg ref="sessionFactory"></constructor-arg>
+	</bean>
+
+	<bean id="tourManagementService" class="jj.model.service.TourManagementService">
+		<constructor-arg>
+			<bean class="jj.model.dao.TourDAOHibernate">
+				<constructor-arg ref="sessionFactory"></constructor-arg>
+			</bean>
+		</constructor-arg>
+	</bean>
+
+	<bean id="tourManagementService1" class="jj.model.service.TourManagementService">
+		<constructor-arg>
+			<bean class="jj.model.dao.Tour_orderDAOHibernate">
+				<constructor-arg ref="sessionFactory"></constructor-arg>
+			</bean>
+		</constructor-arg>
+	</bean>
+
+	<bean id="tourManagementService2" class="jj.model.service.TourManagementService">
+		<constructor-arg>
+			<bean class="jj.model.dao.Tour_evaluateDAOHibernate">
+				<constructor-arg ref="sessionFactory"></constructor-arg>
+			</bean>
+		</constructor-arg>
+	</bean>
+
+	<bean id="tourManagementService3" class="jj.model.service.TourManagementService">
+		<constructor-arg>
+			<bean class="jj.model.dao.Travel_attractionsDAOHibernate">
+				<constructor-arg ref="sessionFactory"></constructor-arg>
+			</bean>
+		</constructor-arg>
+	</bean>
+
+
+	<bean id="attractionsMangementService" class="jj.model.service.AttractionsMangementService">
+		<constructor-arg>
+			<bean class="jj.model.dao.AreaDAOHibernate">
+				<constructor-arg ref="sessionFactory"></constructor-arg>
+			</bean>
+		</constructor-arg>
+	</bean>
+
+	<bean id="attractionsMangementService1" class="jj.model.service.AttractionsMangementService">
+		<constructor-arg>
+			<bean class="jj.model.dao.Attractions_evaluateDAOHibernate">
+				<constructor-arg ref="sessionFactory"></constructor-arg>
+			</bean>
+		</constructor-arg>
+	</bean>
+
+	<bean id="attractionsMangementService2" class="jj.model.service.AttractionsMangementService">
+		<constructor-arg>
+			<bean class="jj.model.dao.AttractionsDAOHibernate">
+				<constructor-arg ref="sessionFactory"></constructor-arg>
+			</bean>
+		</constructor-arg>
+	</bean>
+	<bean id="attractionsMangementService3" class="jj.model.service.AttractionsMangementService">
+		<constructor-arg>
+			<bean class="jj.model.dao.Attractions_imgDAOHibernate">
+				<constructor-arg ref="sessionFactory"></constructor-arg>
+			</bean>
+		</constructor-arg>
+	</bean>
+	
+</beans>

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016/10/13 ?U?? 07:26:17 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="jj.model.Travel_attractionsBean" table="TRAVEL_ATTRACTIONS">
+         <composite-id >
+            <key-property name="tour_id" 
+                          column="TOUR_ID"      type="int"/>
+            <key-property name="attractions_id" 
+                          column="ATTRACTIONS_ID" type="int">
+            </key-property>
+        </composite-id>
+        <property name="sequence" type="int">
+            <column name="SEQUENCE" />
+        </property>
+        
+        
+        
+        <many-to-one name="tourid" class="jj.model.TourBean"  insert="false" update="false">
+            <column name="TOUR_ID" />
+        </many-to-one>
+        
+        <many-to-one name="attractionsid" class="jj.model.AttractionsBean"  insert="false" update="false">
+           <column name="ATTRACTIONS_ID" />
+       	</many-to-one>
+    </class>
+</hibernate-mapping>

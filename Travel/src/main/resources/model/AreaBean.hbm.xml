@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016/10/11 ?W?? 11:39:50 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="jj.model.AreaBean" table="AREA">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <property name="name" type="java.lang.String">
+            <column name="NAME" />
+        </property>
+       
+       
+         <set name="attractions" table="ATTRACTIONS" inverse="true" cascade="delete">
+        	<key column="ID"></key>
+        	<one-to-many class="jj.model.AttractionsBean"/>
+        </set>
+        
+    </class>
+</hibernate-mapping>

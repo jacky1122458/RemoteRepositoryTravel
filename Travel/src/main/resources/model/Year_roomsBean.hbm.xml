@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016/10/5 ?U?? 07:30:16 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="model.Year_roomsBean" table="YEAR_ROOMS">
+        <id name="number" type="int">
+            <column name="NUMBER" />
+            <generator class="identity" />
+        </id>
+        <property name="roomid" type="int">
+            <column name="ROOMID" />
+        </property>
+        <property name="yearday" type="java.util.Date">
+            <column name="YEARDAY" />
+        </property>
+        <property name="room_numbers" type="int">
+            <column name="ROOM_NUMBERS" />
+        </property>
+        
+        <!-- ROOM -->
+		<many-to-one name="roombean" class="model.RoomBean"  insert="false" update="false">
+			<column name="ROOMID" />
+		</many-to-one>
+		
+    </class>
+</hibernate-mapping>

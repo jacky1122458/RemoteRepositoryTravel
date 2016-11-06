@@ -1,0 +1,17 @@
+#main-menu{
+	margin:0 auto;
+	width:450px;
+	height:760px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 75px;
+	font-size: larger;
+}
+.enter{
+	margin-top:15px;
+	margin-bottom:15px;
+	color:#000000;
+}
+.s{
+	color:#FFD306;
+}

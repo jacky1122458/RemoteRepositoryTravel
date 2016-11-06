@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016/10/11 ?U?? 08:35:48 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="jj.model.Attractions_evaluateBean" table="ATTRACTIONS_EVALUATE">
+        <composite-id >
+            <key-property name="member_id" 
+                          column="MEMBER_ID"      type="int"/>
+            <key-property name="attractions_id" 
+                          column="ATTRACTIONS_ID" type="int">
+            </key-property>
+        </composite-id>
+        
+        <property name="attractions_rating" type="int" access="field">
+            <column name="ATTRACTIONS_RATING" />
+        </property>
+        <property name="attractions_evaluate" type="java.lang.String" access="field">
+            <column name="ATTRACTIONS_EVALUATE" />
+        </property>
+        <property name="attractions_status" type="boolean" access="field">
+            <column name="ATTRACTIONS_STATUS" />
+        </property>
+ 
+ 
+   		<many-to-one name="memberid" class="model.MemberBean"  insert="false" update="false">
+            <column name="member_id" />
+        </many-to-one>
+        
+        <many-to-one name="attractionsid" class="jj.model.AttractionsBean"  insert="false" update="false">
+           <column name="ATTRACTIONS_ID" />
+       	</many-to-one>
+ 
+ 
+    </class>
+</hibernate-mapping>

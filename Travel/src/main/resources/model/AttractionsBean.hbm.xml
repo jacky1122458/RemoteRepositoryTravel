@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016/10/11 ?U?? 02:57:43 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="jj.model.AttractionsBean" table="ATTRACTIONS">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        
+        <property name="name" type="java.lang.String">
+            <column name="NAME" />
+        </property>
+        <property name="attractions_type" type="java.lang.String">
+            <column name="ATTRACTIONS_TYPE" />
+        </property>
+        <property name="openinghours" type="java.lang.String">
+            <column name="OPENINGHOURS" />
+        </property>
+        <property name="introduction" type="java.lang.String">
+            <column name="INTRODUCTION" />
+        </property>
+        <property name="district" type="int">
+            <column name="DISTRICT" />
+        </property>
+        <property name="attractions_address" type="java.lang.String">
+            <column name="ATTRACTIONS_ADDRESS" />
+        </property>
+        <property name="lat" type="java.lang.Double">
+            <column name="LAT" />
+        </property>
+        <property name="lng" type="java.lang.Double">
+            <column name="LNG" />
+        </property>
+        <property name="webaddress" type="java.lang.String">
+            <column name="WEBADDRESS" />
+        </property>
+        
+       <many-to-one name="area" class="jj.model.AreaBean"  insert="false" update="false">
+            <column name="DISTRICT" />
+       </many-to-one>
+       
+     
+ 
+        
+        <set name="attractionsimg" table="ATTRACTIONS_IMG" inverse="true" cascade="delete">
+        	<key column="ATTRACTIONS_ID"></key>
+        	<one-to-many class="jj.model.Attractions_imgBean"/>
+        </set>
+        
+        
+        <set name="attractionsid" table="Attractions_evaluate" inverse="true" cascade="delete">
+        	<key column="ID"></key>
+        	<one-to-many class="jj.model.Attractions_evaluateBean"/>
+        </set>
+        
+         <set name="attractionsid1" table="Travel_attractions" inverse="true" cascade="delete">
+        	<key column="ID"></key>
+        	<one-to-many class="jj.model.Travel_attractionsBean"/>
+        </set>
+    </class>
+</hibernate-mapping>

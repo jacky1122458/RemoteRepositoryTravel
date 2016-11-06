@@ -1,0 +1,358 @@
+/*評論區*/
+#Mainframe{
+    border: 1px #FF0000 solid;
+    width:820px;
+    height:auto;
+}
+.hotel_comment{
+    width:810px;
+    height:350px;
+    background-color:#FFFF99;
+}
+.review_list_score_container{
+    width:100%;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+}
+.review_list_score_left{
+    float: left;
+    width: 30%;
+}
+.review_list_score_count{
+    text-align: center;
+}
+.review_list_score{
+    margin: 0 auto;
+    text-align: center;
+    background: #003580;
+    border-radius: 10px 10px 0 0;
+    color: #fff;
+    font-size: 55px;
+    line-height: 90px;
+    padding: 15px;
+    width: 115px;
+}
+.review_list_score_col{
+    float: left;
+    width: 35%;
+    margin: 25px 0 10px 0;
+}
+.ul_style_oncomment{
+    list-style-type: none;
+    margin: .6em 5px;
+    padding: 0;
+    text-align: left;
+}
+.clearfix.one_col{
+    float: left;
+    width: 220px;
+    margin-right: 40px;
+    height:45px;
+}
+.score_bar{
+    height: 12px;
+    float: left;
+    margin: 0;
+    width: 85%;
+}
+.clearfix.one_col
+.review_score_value{
+    color: #999;
+    float: left;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 1;
+    text-align:right;
+    padding: 0;
+    width: 14%;
+}
+.review_score_name{
+    text-align:left;
+    float: none;
+    font-weight: normal;
+    margin: .5em 0 .1em;
+    width: auto;
+}
+/*評論區end*/
+.fontstylebar{
+	font-size: 1.5em;
+	font-weight:bold;
+	margin-top:1em;
+}
+.noticestylebar{
+	position:relative;
+	top:200px;
+}
+#search{
+	width:300px;
+	height:auto;
+	border: 3px #ffbb39 solid;
+	border-radius: 10px 10px 10px 10px;
+	background-color: #ffbb39;
+	color:#000000;
+	margin-bottom:30px;
+	padding-left: 25px;
+}
+.search_box_title{
+	font-weight:900;
+	margin: 5px 0 5px 15px;
+	font-size: 36px;
+	font-family: "Tw Cen MT Condensed Extra Bold"
+}
+#search_box{
+	padding: 7px 7px 7px 7px;
+	margin: 7px 7px 7px 4px;
+	background-color: #ffeec0;
+}
+.search_box_tem{
+	margin:10px 0 10px 0;
+}
+/* put in icon*/
+#search_box_datefrom,#search_box_dateto{
+	position:relative;
+	
+}
+#search_box_tem input{
+	padding-left: 40px;
+}
+#search_box_datefrom i{
+	position:absolute;
+    left:0;
+    padding: 6px 10px;
+}
+#search_box_dateto i{
+	position:absolute;
+    left:0;
+    padding: 6px 10px;
+}
+/* icon end */
+#adults,#children,#rooms{
+	margin:0 0 0 30px;
+	width: 75px;
+	height: 25px;
+}
+#count_stay_length{
+	display: none;
+}
+#submit_btn{
+	margin-left: 150px;	
+}
+
+#search_box_constrain{
+	margin-top: 25px;
+	width:300px;
+	height:auto;
+	border: 3px #ffbb39 solid;
+	border-radius: 10px 10px 10px 10px;
+	background-color:#C4E3F3;
+}
+#search_box_constrain_form{
+	border: 3px #337AB7 solid;
+}
+.search_box_constrain_conditions{
+	font-size:20px;
+	color:#B92C28;
+}
+.filter_tem{
+	margin:5px 0 5px 10px;
+	
+}
+
+div{display:block;}
+
+.gallery-container{
+	position:relative;
+	width:840px;
+	height:460px;
+	margin-bottom:25px;
+}
+#slideshow{
+	width:840px;
+	height:460px;
+}
+#slideshow li{ list-style:none;}
+#slideshow img{
+	width:814px;
+	vertical-align: middle;
+}
+
+
+/*小圖
+.thumbs_border{
+	border-bottom:1px #D9EDF7 solid;
+}
+.small_showimage{
+	padding: 3px 0 0 3px;
+	margin-left: -3px;
+}
+#photo_distanct{
+	padding-top: 10px;
+    padding-left: 1px;
+    overflow: hidden;
+    zoom: 1;
+}
+*/
+#images-compress-zone{
+	width:820px;
+	height:150px;
+	border-bottom:#EB9316 solid;
+	margin-bottom:25px;
+}
+.hotel_thumbs{
+	float:left;
+	overflow:hidden;
+	margin:0px 0.291em 0.291em 0px;
+}
+a:visited{
+    color: rgb(83, 124, 180);
+	font-weight: bold;
+}
+p {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+table {
+    display: table;
+    border-collapse: separate;
+    border-spacing: 2px;
+}
+#hotel_introducion_hightlight_wrapper{
+	position: relative;
+    width: 810px;
+    overflow: hidden;
+    vertical-align: top;
+    background-color:#FFEEC0;
+}
+.hotel_introduction{
+	 float:left;
+    position:relative;
+    width:510px;
+    font-size: 16px;
+    line-height:1.4;
+    padding:5px 0 5px 1em;
+    border:1px red solid
+}
+.hotel_introduction-name-ranked{
+    color:#FF0000;
+    font-weight:bold;
+}
+.hotel_total_score{
+    float:right;
+    position:relative;
+    width: 80px;
+    height: 80px;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f0b7a1+0,8c3310+50,752201+51,bf6e4e+100;Brown+Gloss */
+    background: rgb(240,183,161); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(240,183,161,1) 0%, rgba(140,51,16,1) 50%, rgba(117,34,1,1) 51%, rgba(191,110,78,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(240,183,161,1) 0%,rgba(140,51,16,1) 50%,rgba(117,34,1,1) 51%,rgba(191,110,78,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(240,183,161,1) 0%,rgba(140,51,16,1) 50%,rgba(117,34,1,1) 51%,rgba(191,110,78,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    padding:10px 10px;  
+}
+.grade_font_style{  
+    margin:0 auto;
+    font-size:50px;
+    color:#FFFFFF;
+}
+.showroom_list_table{
+	width:820px;
+	background-color:#FEE4BD;
+	border-spacing:0;
+	border-color: #FF0000;
+    margin: .6em 0 1.8em;
+    border-collapse: collapse;
+    transition: opacity .1s linear;
+    opacity: 1;
+}
+.header_of_table{
+	width:820px;
+	height:50px;
+	top: 0px;
+}
+.roomtype_col{
+	white-space: normal;
+	border-bottom:1px #FF0000 solid;
+	padding:6px 8px;
+}
+.roompeople_col{
+	border-left:1px #FF0000 solid;
+	border-bottom:1px #FF0000 solid;
+	padding:6px 8px;
+}
+.nowprice_col{
+	border-left:1px #FF0000 solid;
+	border-bottom:1px #FF0000 solid;
+	padding:6px 8px;
+	text-align: center;
+	white-space: normal;
+}
+.decideroom_col{
+	border-left:1px #FF0000 solid;
+	border-bottom:1px #FF0000 solid;
+	padding:6px 8px;
+	white-space: normal;
+	min-width: 60px;
+    max-width: 80px;
+    text-align: center;
+}
+.reserveroom_col{
+	border-left:1px #FF0000 solid;
+	border-bottom:1px #FF0000 solid;
+	padding:6px 8px;
+	white-space: normal;
+}
+.showroom_list_table td{
+	border-right: 1px solid #FF0000;
+	border-left: 0 none;
+    border-top: 0 none!important;
+}
+/*589行開始，設定style用*/
+.room_loop_counter1_extendedRow{
+	display:none;
+}
+.lightbox-info-container{
+	overflow: hidden;
+    width: 100%;
+}
+.lightbox_review_container{
+	background-color:#5CD4E8;
+	width:200px;
+	float:right;
+}
+.lightbox_review_container ul{
+	list-style-type:none;
+}
+.lightbox-info-reviews-container--image-gallery{
+	float:left;
+	width:70%;
+}
+.clearBoth{
+	width: 0;
+    height: 0;
+    visibility: hidden;
+    margin: 0;
+    clear: both;
+}
+.facilities_hotel ul,li{
+	list-style-type:none;
+}
+.fontstylebar_time{
+	font-size: 1.5em;
+    font-weight: bold;
+    margin-left:25px;
+}
+.facilitiesChecklistSection{
+	float:left;
+	width:250px;
+    margin: 0 10px;
+    font-size: 13px;
+}
+.facilitiesChecklistSection li{
+	padding:3px 0 2px 25px;
+	
+}
+.roomDefaultUse{
+	text-align:center;
+}

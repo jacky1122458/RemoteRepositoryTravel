@@ -1,0 +1,40 @@
+.search_box_title {
+	margin: 5px 0 5px;
+	font-size: 36px;
+	font-family: "Tw Cen MT Condensed Extra Bold";
+	color:#FF0000;
+}
+#Mainframe {
+	width: 50%;
+	height: auto;
+	margin: 0 auto;
+	position: relative;
+	top: 120px;
+}
+.main_introduce_loop {
+	width: auto;
+	margin: 5px 5px;
+	padding: 5px 5px;
+	border: 3px #BBBBBB solid;
+	border-radius: 10px;
+}
+.travel_information {	
+	width: 55%;
+	margin: 10px 10px;
+	padding: 5px 5px;
+	
+}
+.travel_information p{
+	margin-top:10px;
+}
+.togglelink {
+	font-style: oblique;
+	float: right;
+	cursor:default;
+}
+.spacing_line{
+	border:2px #000079 dotted;
+	width:800px;
+	margin:0 auto;
+}
+

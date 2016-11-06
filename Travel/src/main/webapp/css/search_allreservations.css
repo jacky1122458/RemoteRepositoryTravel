@@ -1,0 +1,50 @@
+.search_box_title {
+	margin: 5px 0 5px;
+	font-size: 36px;
+	font-family: "Tw Cen MT Condensed Extra Bold"
+}
+
+.official_font {
+	font-weight: bolder;
+	font-size: x-large;
+	position: relative;
+	left: 90px;
+	top: 100px;
+}
+#Mainframe {
+	width: 50%;
+	height: auto;
+	margin: 0 auto;
+	position: relative;
+	top: 120px;
+}
+.main_introduce_loop {
+	width: auto;
+	margin: 5px 5px;
+	padding: 5px 5px;
+	border: 3px #BBBBBB solid;
+	border-radius: 10px;
+}
+.big_img_template {
+	width: 300px;
+	height: 360px;
+	border-radius: 10px;
+}
+.brief_introduction {
+	float: right;
+	border: 1px #FF0000 solid;
+	width: 50%;
+	margin: 10px 10px;
+	padding: 5px 5px;
+	background-color: #DBDBDB;
+	border-radius: 10px;
+}
+.loop {
+	width: 720px;
+	height: 570px;
+	margin: 5px 5px;
+	padding: 5px 5px;
+	border-radius: 30px;
+}
+
+

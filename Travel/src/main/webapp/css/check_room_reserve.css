@@ -1,0 +1,142 @@
+.fontstylebar{
+	font-size: 2em;
+	font-weight:bold;
+	margin-top:1em;
+}
+#search{
+	width:300px;
+	height:auto;
+	border: 3px #ffbb39 solid;
+	border-radius: 10px 10px 10px 10px;
+	background-color: #ffbb39;
+	color:#000000;
+}
+.search_box_title{
+	margin: 5px 0 5px 15px;
+	font-size: 36px;
+	font-family: "Tw Cen MT Condensed Extra Bold"
+}
+#search_box{
+	padding: 7px 7px 7px 7px;
+	margin: 7px 7px 7px 4px;
+	background-color: #ffeec0;
+}
+.search_box_tem{
+	margin:10px 0 10px 0;
+}
+/* put in icon*/
+#search_box_datefrom,#search_box_dateto{
+	position:relative;
+	
+}
+#search_box_tem input{
+	padding-left: 40px;
+}
+#search_box_datefrom i{
+	position:absolute;
+    left:0;
+    padding: 6px 10px;
+}
+#search_box_dateto i{
+	position:absolute;
+    left:0;
+    padding: 6px 10px;
+}
+/* icon end */
+#adults,#children,#rooms{
+	margin:0 0 0 30px;
+	width: 75px;
+	height: 25px;
+}
+#count_stay_length{
+	display: none;
+}
+#submit_btn{
+	margin-left: 150px;	
+}
+
+
+a:visited{
+    color: rgb(83, 124, 180);
+	font-weight: bold;
+}
+p {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+table {
+    display: table;
+    border-collapse: separate;
+    border-spacing: 2px;
+}
+.hotel_image{
+	width:240px;
+	height:300px;
+	border-radius:10px 10px 10px 10px; 
+}
+.check_hotel_content{
+	width:450px;
+	height:300px;
+	float:left;
+	position:relative;
+	left:25px;
+	background-color: #FFFFFF;
+	border-radius:10px 10px 10px 10px;
+	padding:10px 10px;
+}
+.reserve_canceldate{
+	color:#FF0000;
+	font-weight:bolder;
+}
+.spacing-line{
+	width:auto;
+	border:1px #000079 solid;
+}
+.price-zone{
+	width:160px;
+	height:25px;
+	position:relative;
+	top:25px;
+}
+.hotel_room_price{
+	width:150px;
+	height:25px;
+	position:relative;
+	left:150px;
+	font-size:2em;
+	color:#FF0000;
+	text-decoration:underline;
+}
+.rt_bed_type{
+	width:150px;
+	height:25px;
+	position:relative;
+	left:60px;
+	font-size:2em;
+	color:#FF0000;
+}
+.rt_number{
+	position:relative;
+	left:100px;
+	font-size:24px;
+}
+.checkinandout{
+	display:inline-block;
+	position:relative;
+	top:310px;
+	left:-650px;
+	font-weight:bold;
+}
+#checked{
+	position:relative;
+	top:400px;
+	left:-100px;
+}
+.input_member_info{
+	width:200px;
+	height:25px;
+	margin:20px 20px;
+}

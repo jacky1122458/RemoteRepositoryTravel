@@ -1,0 +1,145 @@
+#search{
+	width:300px;
+	height:auto;
+	border: 3px #ffbb39 solid;
+	border-radius: 10px 10px 10px 10px;
+	background-color: #ffbb39;
+	color:#000000;
+	padding-left:15px;
+}
+.search_box_title{
+	margin: 5px 0 5px 15px;
+	font-size: 36px;
+	font-family: "Tw Cen MT Condensed Extra Bold"
+}
+#search_box{
+	padding: 7px 7px 7px 7px;
+	margin: 7px 7px 7px 4px;
+	background-color: #ffeec0;
+}
+.search_box_tem{
+	margin:10px 0 10px 0;
+}
+/* put in icon*/
+#search_box_datefrom,#search_box_dateto{
+	position:relative;
+	
+}
+#search_box_tem input{
+	padding-left: 40px;
+}
+#search_box_datefrom i{
+	position:absolute;
+    left:0;
+    padding: 6px 10px;
+}
+#search_box_dateto i{
+	position:absolute;
+    left:0;
+    padding: 6px 10px;
+}
+/* icon end */
+#adults,#children,#rooms{
+	margin:0 0 0 30px;
+	width: 75px;
+	height: 25px;
+}
+#count_stay_length{
+	display: none;
+}
+#submit_btn{
+	margin-left: 180px;	
+	margin-bottom: 15px;
+}
+
+#search_box_constrain{
+	padding-left:10px;
+	margin-top: 25px;
+	width:300px;
+	height:auto;
+	border: 3px #ffbb39 solid;
+	border-radius: 10px 10px 10px 10px;
+	background-color:#C4E3F3;
+}
+#search_box_constrain_form{
+	border: 3px #337AB7 solid;
+}
+.search_box_constrain_conditions{
+	font-size:20px;
+	color:#B92C28;
+}
+.filter_tem{
+	margin:25px 0 5px 10px;
+	
+}
+
+div{display:block;}
+.wraper_hotel{
+	width:750px;
+	height:380px;
+	border:1px #2AABD2 solid;
+	box-shadow:3px 3px 3px #72c5f0;
+	padding: 20px 10px 20px 10px;
+	background-color:#ffbb39;
+	margin-top:30px;
+	margin-bottom:30px;
+}
+.images_temp{
+	position:relative;
+	float:left;
+	width:360px;
+	height:240px;
+	margin:20px 10px 0 0;
+}
+.images_temp img{
+	width:360px;
+	height:240px;
+}
+.hotel_context_area{
+	float:right;
+	width:300px;
+	height:200px;
+}
+.hotel_content{
+	width:inherit;
+	position:relative;
+	float:left;
+	top:20px;
+}
+.member_number{
+	position:relative;
+	float:right;
+}
+.font_style_tem{
+	font-size:1.5em;
+	font-weight:bolder;
+}
+.room_price{
+	position:relative;	
+	float:right;
+	top:130px;
+}
+.room_price_font{
+	font-size:2em;
+	font-weight:bolder;
+	color:#FF0000!important;
+	text-shadow:#000000 3px 1px 7px;
+}
+.spacing_line{
+	position:relative;
+	top:280px;
+	width:auto;
+	border: 1px #5BC0DE solid;
+}
+.btn_area{
+	display:inline-block;
+	position:relative;
+	top:100px;
+	left:200px;
+	color:#000000;
+}
+.total-count-romm-price{
+	margin-top: 30px;
+    font-size: larger;
+    line-height: 30px;
+}

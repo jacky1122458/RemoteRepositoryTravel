@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016/10/11 ?U?? 06:20:47 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="jj.model.Attractions_imgBean" table="ATTRACTIONS_IMG">
+        
+        <id name="photoid" type="int">
+            <column name="PHOTOID" />
+            <generator class="identity" />
+        </id>
+        
+        <property name="attractions_id" type="int">
+            <column name="ATTRACTIONS_ID" />
+        </property>
+        
+         <property name="attractions_img" type="binary">
+            <column name="ATTRACTIONS_IMG" />
+        </property>
+          
+          
+          
+          
+ 
+        
+        <many-to-one name="attractions" class="jj.model.AttractionsBean"  insert="false" update="false">
+            <column name="ID" ></column>
+        </many-to-one>
+        
+        
+      </class>
+</hibernate-mapping>

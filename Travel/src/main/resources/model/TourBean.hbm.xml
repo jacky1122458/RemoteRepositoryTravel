@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016/10/12 ?U?? 03:55:13 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="jj.model.TourBean" table="TOUR">
+        <id name="tour_id" type="int">
+            <column name="TOUR_ID" />
+            <generator class="identity" />
+        </id>
+        <property name="tour_name" type="java.lang.String">
+            <column name="TOUR_NAME" />
+        </property>
+        <property name="tour_restrict" type="int">
+            <column name="TOUR_RESTRICT" />
+        </property>
+        <property name="tour_price" type="int">
+            <column name="TOUR_PRICE" />
+        </property>
+        <property name="meeting_time" type="java.lang.String">
+            <column name="MEETING_TIME" />
+        </property>
+        <property name="cost_gloze" type="java.lang.String">
+            <column name="COST_GLOZE" />
+        </property>
+        <property name="age_limit" type="int">
+            <column name="AGE_LIMIT" />
+        </property>
+        <property name="meals" type="java.lang.String">
+            <column name="MEALS" />
+        </property>
+        <property name="remark" type="java.lang.String">
+            <column name="REMARK" />
+        </property>
+        <property name="meeting_place" type="java.lang.String">
+            <column name="MEETING_PLACE" />
+        </property>
+        <property name="lat" type="java.lang.Double">
+            <column name="LAT" />
+        </property>
+        <property name="lng" type="java.lang.Double">
+            <column name="LNG" />
+        </property>
+        <property name="tour_status" type="boolean">
+            <column name="TOUR_STATUS" />
+        </property>
+        <property name="explanation" type="java.lang.String">
+            <column name="EXPLANATION" />
+        </property>
+        <property name="departure_date" type="date">
+            <column name="DEPARTURE_DATE" />
+        </property>
+       
+        
+        <set name="tourid" table="Tour_order" inverse="true" cascade="delete">
+        	<key column="TOUR_ID"></key>
+        	<one-to-many class="jj.model.Tour_orderBean"/>
+        </set>
+        
+         <set name="tourid1" table="Tour_evaluate" inverse="true" cascade="delete">
+        	<key column="TOUR_ID"></key>
+        	<one-to-many class="jj.model.Tour_evaluateBean"/>
+        </set>
+        
+         <set name="tourid2" table="Travel_attractions" inverse="true" cascade="delete">
+        	<key column="TOUR_ID"></key>
+        	<one-to-many class="jj.model.Travel_attractionsBean"/>
+        </set>
+        
+    </class>
+</hibernate-mapping>

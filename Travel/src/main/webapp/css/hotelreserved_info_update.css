@@ -1,0 +1,23 @@
+#container{
+margin:0 auto;
+width:1200px;
+height:500px;
+}
+table{
+	display: table;
+    border-collapse: separate;
+    border-spacing: 2px;
+    border-color: gray;
+    background-color:#FFEEEE;
+    position:relative;
+    top:100px;
+}
+th{
+	text-align: center;
+}
+.cancel{
+	position:relative;
+	left:1400px;
+	TOP:-250PX;
+}
+
